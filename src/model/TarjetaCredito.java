@@ -19,6 +19,7 @@ public class TarjetaCredito extends ProductoBancario {
 
   @Override
   public String toString() {
-    return super.toString() + "Clave de Seguridad: " + claveSeguridad;
+    return super.toString()
+        + "\n Clave de Seguridad: " + claveSeguridad;
   }
 }
