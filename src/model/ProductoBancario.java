@@ -1,13 +1,18 @@
 package model;
 
+import excepcion.ProductoException;
+
 public class ProductoBancario {
   // atributos
   private int banco;
   private int sucursal;
-  private int num = 0;
+  private static int num = 0;
   private int numProducto; // no se pide por constructor
 
-  public ProductoBancario(int banco, int sucursal) {
+  public ProductoBancario (int banco, int sucursal) throws ProductoException {
+    if (banco < 0 || sucursal < 0) {
+      throw new ProductoException("El banco y la sucursal no pueden ser negativos");
+    }
     this.banco = banco;
     this.sucursal = sucursal;
     this.numProducto = num++;
@@ -48,8 +53,8 @@ public class ProductoBancario {
 
   public String toString() {
     return "Banco: " + banco
-        + "\n Sucursal: " + sucursal
-        + "\n Número de producto: " + numProducto;
+        + "\nSucursal: " + sucursal
+        + "\nNúmero de producto: " + numProducto;
   }
 
   public void mostrarInfo() {

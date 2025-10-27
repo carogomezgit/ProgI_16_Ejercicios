@@ -1,5 +1,8 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import excepcion.ProductoException;
+import model.CajaAhorro;
+import model.CuentaCorriente;
+import model.TarjetaCredito;
+
 public class Main {
 
   /** Ejercicio: Productos bancarios
@@ -12,9 +15,8 @@ public class Main {
    */
 
   public static void main(String[] args) {
-
-    
-
-
+    CajaAhorro cajaAhorro1 = new CajaAhorro(1, 100);
+    CuentaCorriente cuentaCorriente1 = new CuentaCorriente(-1, 101);
+    TarjetaCredito tarjetaCredito1 = new TarjetaCredito(2, 102, 999);
   }
 }
